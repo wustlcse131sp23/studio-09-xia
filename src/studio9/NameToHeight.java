@@ -21,7 +21,24 @@ public class NameToHeight {
 		Scanner in = new Scanner(System.in);
 
 		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> nameToHeight = new HashMap<>();
+		
+		boolean quit = false;
+		while (!quit){
+			System.out.println("name?");
+			String name  = in.next();
+			System.out.println("height?");
+			int height = in.nextInt();
+			nameToHeight.put(name, height);
+			System.out.println("quit? (quite / anything else ");
+			String temp = in.next();
+			if(temp.equals("quite")){
+				quit = true;
+			}
+			
+		}
+		System.out.println(nameToHeight);
+		
 
 	}
 }
